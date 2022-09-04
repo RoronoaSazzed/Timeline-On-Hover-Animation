@@ -20,165 +20,180 @@
       }
 
       .wrapper {
-        width: 1000px;
+        width: 100%;
+        max-width: 1160px;
       }
 
-      #c_1,
-      #c_2,
-      #c_3,
-      #c_4,
-      #c_5 {
-        transform-box: fill-box;
-        transform-origin: center;
+      #mobile_timeline {
+        display: none;
       }
 
-      #c_1:hover,
-      #c_2:hover,
-      #c_3:hover,
-      #c_4:hover,
-      #c_5:hover {
-        cursor: pointer;
-      }
+      @media (min-width: 320px) and (max-width: 480px) {
+        #pc_timeline {
+          display: none;
+        }
 
-      #c_1:hover #text_1,
-      #c_2:hover #text_2,
-      #c_3:hover #text_3,
-      #c_4:hover #text_4 {
-        opacity: 1;
-      }
+        #mobile_timeline {
+          display: block;
+        }
 
-      #stroke_1,
-      #stroke_2,
-      #stroke_3,
-      #stroke_4,
-      #stroke_5 {
-        opacity: 0;
-      }
+        #c_1,
+        #c_2,
+        #c_3,
+        #c_4,
+        #c_5 {
+          transform-box: fill-box;
+          transform-origin: center;
+        }
 
-      #stroke_1,
-      #stroke_2,
-      #stroke_3,
-      #stroke_4,
-      #stroke_5,
-      #stroke_1_top,
-      #stroke_2_top,
-      #stroke_3_top,
-      #stroke_4_top,
-      #stroke_5_top {
-        transform-box: fill-box;
-        transform-origin: center;
-      }
+        #c_1:hover,
+        #c_2:hover,
+        #c_3:hover,
+        #c_4:hover,
+        #c_5:hover {
+          cursor: pointer;
+        }
 
-      #text_1,
-      #text_2,
-      #text_3,
-      #text_4 {
-        transform-box: fill-box;
-        transform-origin: center;
-        opacity: 0;
-        transition: 0.25s;
-      }
-
-      #stroke_1,
-      #stroke_2,
-      #stroke_3,
-      #stroke_4,
-      #stroke_5 {
-        animation: pulsate1 5s ease-in-out infinite;
-      }
-
-      #stroke_2 {
-        animation: pulsate2 5s ease-in-out infinite;
-      }
-
-      #stroke_3 {
-        animation: pulsate3 5s ease-in-out infinite;
-      }
-
-      #stroke_4 {
-        animation: pulsate4 5s ease-in-out infinite;
-      }
-
-      #stroke_5 {
-        animation: pulsate5 5s ease-in-out infinite;
-      }
-
-      @keyframes pulsate1 {
-        0% {
+        #c_1:hover #text_1,
+        #c_2:hover #text_2,
+        #c_3:hover #text_3,
+        #c_4:hover #text_4 {
           opacity: 1;
         }
 
-        20% {
-          transform: scale(1.5);
+        #stroke_1,
+        #stroke_2,
+        #stroke_3,
+        #stroke_4,
+        #stroke_5 {
           opacity: 0;
         }
 
-        100% {
-          transform: scale(1.5);
+        #stroke_1,
+        #stroke_2,
+        #stroke_3,
+        #stroke_4,
+        #stroke_5,
+        #stroke_1_top,
+        #stroke_2_top,
+        #stroke_3_top,
+        #stroke_4_top,
+        #stroke_5_top {
+          transform-box: fill-box;
+          transform-origin: center;
+        }
+
+        #text_1,
+        #text_2,
+        #text_3,
+        #text_4 {
+          transform-box: fill-box;
+          transform-origin: center;
           opacity: 0;
-        }
-      }
-
-      @keyframes pulsate2 {
-        0%,
-        20% {
-          opacity: 1;
+          transition: 0.25s;
         }
 
-        40% {
-          transform: scale(1.5);
-          opacity: 0;
+        #stroke_1,
+        #stroke_2,
+        #stroke_3,
+        #stroke_4,
+        #stroke_5 {
+          animation: pulsate1 5s ease-in-out infinite;
         }
 
-        100% {
-          transform: scale(1.5);
-          opacity: 0;
-        }
-      }
-
-      @keyframes pulsate3 {
-        0%,
-        40% {
-          opacity: 1;
+        #stroke_2 {
+          animation: pulsate2 5s ease-in-out infinite;
         }
 
-        60% {
-          transform: scale(1.5);
-          opacity: 0;
+        #stroke_3 {
+          animation: pulsate3 5s ease-in-out infinite;
         }
 
-        100% {
-          transform: scale(1.5);
-          opacity: 0;
-        }
-      }
-
-      @keyframes pulsate4 {
-        0%,
-        60% {
-          opacity: 1;
+        #stroke_4 {
+          animation: pulsate4 5s ease-in-out infinite;
         }
 
-        80% {
-          transform: scale(1.5);
-          opacity: 0;
+        #stroke_5 {
+          animation: pulsate5 5s ease-in-out infinite;
         }
 
-        100% {
-          transform: scale(1.5);
-          opacity: 0;
-        }
-      }
+        @keyframes pulsate1 {
+          0% {
+            opacity: 1;
+          }
 
-      @keyframes pulsate5 {
-        0%,
-        80% {
-          opacity: 1;
+          20% {
+            transform: scale(1.5);
+            opacity: 0;
+          }
+
+          100% {
+            transform: scale(1.5);
+            opacity: 0;
+          }
         }
 
-        100% {
-          transform: scale(1.5);
-          opacity: 0;
+        @keyframes pulsate2 {
+          0%,
+          20% {
+            opacity: 1;
+          }
+
+          40% {
+            transform: scale(1.5);
+            opacity: 0;
+          }
+
+          100% {
+            transform: scale(1.5);
+            opacity: 0;
+          }
+        }
+
+        @keyframes pulsate3 {
+          0%,
+          40% {
+            opacity: 1;
+          }
+
+          60% {
+            transform: scale(1.5);
+            opacity: 0;
+          }
+
+          100% {
+            transform: scale(1.5);
+            opacity: 0;
+          }
+        }
+
+        @keyframes pulsate4 {
+          0%,
+          60% {
+            opacity: 1;
+          }
+
+          80% {
+            transform: scale(1.5);
+            opacity: 0;
+          }
+
+          100% {
+            transform: scale(1.5);
+            opacity: 0;
+          }
+        }
+
+        @keyframes pulsate5 {
+          0%,
+          80% {
+            opacity: 1;
+          }
+
+          100% {
+            transform: scale(1.5);
+            opacity: 0;
+          }
         }
       }
     </style>
@@ -187,6 +202,7 @@
     <div class="parentDiv">
       <div class="wrapper">
         <svg
+          id="mobile_timeline"
           width="100%"
           min-height="0"
           viewBox="0 0 1280 1920"
@@ -199,11 +215,11 @@
                 <g id="Vector">
                   <path
                     d="M612.574 256.212H903.518V650.212H612.574V256.212Z"
-                    fill="#9ADBFF"
+                    fill="#437199"
                   />
                   <path
                     d="M552.343 306.44L612.574 256.212L612.574 356.212L552.343 306.44Z"
-                    fill="#9ADBFF"
+                    fill="#437199"
                   />
                 </g>
                 <g
@@ -408,7 +424,7 @@
                 cx="428"
                 cy="306.461"
                 r="63.3846"
-                stroke="#9ADBFF"
+                stroke="#437199"
                 stroke-width="4"
               />
               <circle
@@ -416,21 +432,21 @@
                 cx="428"
                 cy="306.461"
                 r="63.3846"
-                stroke="#9ADBFF"
+                stroke="#437199"
                 stroke-width="4"
               />
-              <circle id="fill_1" cx="428" cy="306.461" r="50" fill="#9ADBFF" />
+              <circle id="fill_1" cx="428" cy="306.461" r="50" fill="#437199" />
             </g>
             <g id="c_2">
               <g id="text_2">
                 <g id="Vector_2">
                   <path
                     d="M612.574 583.231H903.518V977.231H612.574V583.231Z"
-                    fill="#9ADBFF"
+                    fill="#437199"
                   />
                   <path
                     d="M552.343 633.459L612.574 583.231L612.574 683.231L552.343 633.459Z"
-                    fill="#9ADBFF"
+                    fill="#437199"
                   />
                 </g>
                 <g
@@ -679,7 +695,7 @@
                 cx="428"
                 cy="633.231"
                 r="63.3846"
-                stroke="#9ADBFF"
+                stroke="#437199"
                 stroke-width="4"
               />
               <circle
@@ -687,21 +703,21 @@
                 cx="428"
                 cy="633.231"
                 r="63.3846"
-                stroke="#9ADBFF"
+                stroke="#437199"
                 stroke-width="4"
               />
-              <circle id="fill_2" cx="428" cy="633.231" r="50" fill="#9ADBFF" />
+              <circle id="fill_2" cx="428" cy="633.231" r="50" fill="#437199" />
             </g>
             <g id="c_3">
               <g id="text_3">
                 <g id="Vector_3">
                   <path
                     d="M612.204 910.769H903.148V1304.77H612.204V910.769Z"
-                    fill="#9ADBFF"
+                    fill="#437199"
                   />
                   <path
                     d="M552.343 960.997L612.574 910.769L612.574 1010.77L552.343 960.997Z"
-                    fill="#9ADBFF"
+                    fill="#437199"
                   />
                 </g>
                 <g id="If the mark is unique and registrable">
@@ -836,7 +852,7 @@
                 cx="428"
                 cy="960"
                 r="63.3846"
-                stroke="#9ADBFF"
+                stroke="#437199"
                 stroke-width="4"
               />
               <circle
@@ -844,21 +860,21 @@
                 cx="428"
                 cy="960"
                 r="63.3846"
-                stroke="#9ADBFF"
+                stroke="#437199"
                 stroke-width="4"
               />
-              <circle id="fill_3" cx="428" cy="960" r="50" fill="#9ADBFF" />
+              <circle id="fill_3" cx="428" cy="960" r="50" fill="#437199" />
             </g>
             <g id="c_4">
               <g id="text_4">
                 <g id="Vector_4">
                   <path
                     d="M612.574 1237.54H903.518V1631.54H612.574V1237.54Z"
-                    fill="#9ADBFF"
+                    fill="#437199"
                   />
                   <path
                     d="M552.343 1287.77L612.574 1237.54L612.574 1337.54L552.343 1287.77Z"
-                    fill="#9ADBFF"
+                    fill="#437199"
                   />
                 </g>
                 <g
@@ -1139,7 +1155,7 @@
                 cx="428"
                 cy="1286.77"
                 r="63.3846"
-                stroke="#9ADBFF"
+                stroke="#437199"
                 stroke-width="4"
               />
               <circle
@@ -1147,10 +1163,10 @@
                 cx="428"
                 cy="1286.77"
                 r="63.3846"
-                stroke="#9ADBFF"
+                stroke="#437199"
                 stroke-width="4"
               />
-              <circle id="fill_4" cx="428" cy="1286.77" r="50" fill="#9ADBFF" />
+              <circle id="fill_4" cx="428" cy="1286.77" r="50" fill="#437199" />
             </g>
             <g id="c_5">
               <circle
@@ -1158,7 +1174,7 @@
                 cx="428"
                 cy="1613.54"
                 r="63.3846"
-                stroke="#9ADBFF"
+                stroke="#437199"
                 stroke-width="4"
               />
               <circle
@@ -1166,33 +1182,33 @@
                 cx="428"
                 cy="1613.54"
                 r="63.3846"
-                stroke="#9ADBFF"
+                stroke="#437199"
                 stroke-width="2"
               />
-              <circle id="fill_5" cx="428" cy="1613.54" r="50" fill="#9ADBFF" />
+              <circle id="fill_5" cx="428" cy="1613.54" r="50" fill="#437199" />
             </g>
             <path
               id="connector_1"
               d="M428 369.846L428 569.846"
-              stroke="#9ADBFF"
+              stroke="#437199"
               stroke-width="4"
             />
             <path
               id="connector_2"
               d="M428 697.127L428 897.127"
-              stroke="#9ADBFF"
+              stroke="#437199"
               stroke-width="4"
             />
             <path
               id="connector_3"
               d="M428 1023.38L428 1223.38"
-              stroke="#9ADBFF"
+              stroke="#437199"
               stroke-width="4"
             />
             <path
               id="connector_4"
               d="M428 1350.15L428 1550.15"
-              stroke="#9ADBFF"
+              stroke="#437199"
               stroke-width="4"
             />
             <g id="Applying for your mark">
